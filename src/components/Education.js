@@ -46,7 +46,7 @@ const Education = () => {
               <strong>Mechanical Engineering</strong>
             </p>
             <p className="location">Trichy - Tamilnadu</p>
-            <span className="date">2013-2017</span>
+            <span className="date">Aug 2013 - April 2017</span>
           </div>
         </div>
 
@@ -61,7 +61,7 @@ const Education = () => {
               <strong>Maths, Biology</strong>
             </p>
             <p className="location">Kachirayapalayam - Tamilnadu</p>
-            <span className="date">2011-2013</span>
+            <span className="date">Aug 2011 - March 2013</span>
           </div>
         </div>
       </div>

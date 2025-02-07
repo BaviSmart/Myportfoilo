@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import WOW from 'wowjs';
 import civilImage from '../assets/images/civil.jpg';
-import bgImage from '../assets/images/bg-image-2.jpg';
 import portfolioImage from '../assets/images/Portfolio.jpg';
 import beedesk from '../assets/images/logobackgrey.jpg';
 import skyhms from '../assets/images/skyhms.png';
@@ -22,8 +21,6 @@ const Projects = () => {
     event.preventDefault();
     if (projectName === "M Construction") {
         window.open('https://tomato-silvana-70.tiiny.site/', '_blank');
-    } else if (projectName === "My Portfolio") {
-        window.open('single-portfolio.html', '_blank');
     } else if (projectName === "MIS Mobile App") {
         window.open('https://svr1-app2.skyhms.in/mob_login/?deviceid=12ba9f62-a459-4497-86e5-c0911516620d&&userid=5385&edata=', '_blank');
     } else if (projectName === "SKYHMS") {
