@@ -780,7 +780,7 @@ section .title::after {
     background: #191919;
 }
 .contact .contact-content .column {
-    width: calc(100% - 30px);
+    width: calc(50% - 30px);
 }
 .contact .contact-content .text {
     font-size: 20px;
@@ -809,26 +809,13 @@ section .title::after {
 .contact .contact-content .row .sub-title2 {
     margin-left: 6px;
 }
-.contact .contact-content .row svg {
-    font-size: 20px;
-    color: #fff;
-}
 .contact .contact-content .row i {
     font-size: 20px;
     background: #20a6ff;
     color: #111;
     border-radius: 50%;
-    padding: 9px 11px 3px 11px;
+    padding: 8px 12px 3px 12px;
 }
-.contact .contact-content a  {
-    color: #fff;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-.contact .contact-content  a:hover  {
-    color: #5cace2;
-    transform: scale(1.5);
-}
-
 .contact .contact-content .info .head1,
 .head2,
 .head3 {
@@ -885,11 +872,14 @@ section .title::after {
     display: flex;
     align-items: center;
 }
-.contact-details {
-    display: flex;
+.contact .contact-content a {
+    color: #fff;
 }
-.contact-details .icon-right {
-    margin-left: 20%;
+.contact .contact-content svg {
+    fill: #fff;
+}
+.contact .contact-content a:hover {
+    color: #20a6ff;
 }
 .right form .button-area button {
     color: #111;
@@ -927,6 +917,10 @@ footer span a:hover {
 /* scroll bar */
 ::-webkit-scrollbar {
     width: 15px;
+}
+
+.contact section.Toastify{
+    padding: 0;
 }
 
 /* media query */
