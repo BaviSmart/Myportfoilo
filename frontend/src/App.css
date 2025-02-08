@@ -36,7 +36,7 @@ footer {
 
 .about .about-content,
 .projects .project-content,
-.skills .skills-content,
+/* .skills .skills-content, */
 .contact .contact-content {
     display: flex;
     flex-wrap: wrap;
@@ -357,7 +357,6 @@ section .title::after {
     text-align: justify;
     color: #fcfc;
     color: #191919;
-    /* color: #fff; */
     letter-spacing: 1px;
     line-height: 28px;
     font-size: 18px;
@@ -395,6 +394,14 @@ section .title::after {
     animation-iteration-count: 1;
 } */
 
+@media (max-width: 576px) {
+    .about .about-content .right a {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 @keyframes fadeInRight {
     0% {
         opacity: 0;
@@ -409,11 +416,16 @@ section .title::after {
 /* skills section styling */
 .skills {
     width: 100%;
-    padding: 100px 0px;
+    padding: 60px 20px;
     background-color: #f5f5f5;
     background: rgb(235, 235, 235);
     background: #242424;
     color: #fff;
+}
+.skills .title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 .skills .title::before,
 .contact .title::before {
@@ -429,21 +441,20 @@ section .title::after {
 }
 
 .skills .subheading {
-    margin-top: 2rem;
+    margin: 2rem;
     font-size: 1.5rem;
-    text-align: left;
+    text-align: center;
 }
 
 .skills .skills-category {
-    margin-bottom: 2rem;
-    margin-left: 12rem;
+    margin: 2rem;
 }
   
 .skills .skills-list {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 20px; 
-    justify-content: flex-start; 
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    justify-items: center; 
 }
   
 .skills .skill-item {
@@ -452,13 +463,16 @@ section .title::after {
     align-items: center; 
     text-align: center;
     width: 100px; 
-    margin-top: 20px
+    margin-top: 20px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .skills .skill-item img {
     margin-bottom: 8px; 
     border-radius: 8px; 
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    width: 60px;
+    height: 60px;
     transition: transform 0.5s ease, box-shadow 0.5s ease; 
 }
 .skills .skill-item img:hover{
@@ -470,6 +484,26 @@ section .title::after {
 .skills .skill-item p {
     font-size: 0.9rem;
     color: #fff;
+    margin-top: 8px;
+}
+
+/* Responsive Design for Different Screen Sizes */
+@media (max-width: 1200px) {
+    .skills .skills-list {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .skills .skills-list {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .skills .skills-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
 }
   
 /* without d-flex it's not work */
@@ -506,6 +540,7 @@ section .title::after {
     height: 350px;
     overflow: hidden;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .projects .inner-img {
     transition: 0.3s;
@@ -515,7 +550,7 @@ section .title::after {
     object-fit: cover;  
 }
 .projects .inner-img:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 .projects .img-wrapper .overlay{
     position: absolute;
@@ -523,7 +558,7 @@ section .title::after {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     opacity: 0;
     transition: opacity .4s;
 }
@@ -536,8 +571,9 @@ section .title::after {
 }
 .projects .overlay h5{
     text-align: center;
-    padding-top: 225px;
+    /* padding-top: 225px; */
     font-size: 1.5rem;
+    margin-top: 32%;
     color: #fff;
     font-weight: 500;
 }
@@ -550,6 +586,12 @@ section .title::after {
     background-color: #111;
     color: #fff;
     border-radius: 50%;
+}
+.projects .img-wrapper .mis_app {
+    padding-left: 13%;
+}
+.projects .img-wrapper .skyhms {
+    padding: 10%  0 0 13%;
 }
 
 @keyframes fadeInLeft {
@@ -624,7 +666,6 @@ section .title::after {
 }
   
 .education .card , .experience .card{
-    /* background-color: #fff;  */
     padding-left: 20px;
     border-radius: 8px;
     width: 100%;
@@ -710,6 +751,25 @@ section .title::after {
     color: #333;
 }
 
+@media (max-width: 576px) {
+    .education .title, .experience .title{
+        margin-bottom: 30px;
+    }
+    .education .resume-wrap , .experience .resume-wrap {
+       padding-bottom: 20px;
+    }
+    .education .resume-wrap h2, .experience .resume-wrap h2{
+       font-size: 1.6rem;
+    }
+    .education .icon-card, .experience .icon-card{
+        width: 40px;
+        height: 40px;
+    }
+    section {
+        padding: 50px 0px;
+    }
+}
+
 /* Counter facts */
 .facts{
     height: 400px;
@@ -736,7 +796,7 @@ section .title::after {
     border-radius: 50%;
     background-color: #20a6ff;
     margin-left: 100px;
-    padding: 6px 6px 2px 6px;
+    padding: 6px 6px 0px 6px;
 }
 .facts .counterup .fa-users {
     margin: 10px;
@@ -1012,6 +1072,8 @@ footer span a:hover {
         width: 100%;
         margin-bottom: 35px;
     }
+    
+    
 }
 
 @media (max-width: 768px) {
@@ -1029,6 +1091,7 @@ footer span a:hover {
     .projects .img-wrapper {
       width: 100%;
       height: 250px;
+      border-radius: 12px;
     }
     .facts{
         min-height: 700px;
@@ -1037,9 +1100,7 @@ footer span a:hover {
         display: block;
         padding-top: 50px;
     }
-    .facts .counterup .fa {
-        margin-left: 45%;
-    }
+    
     .facts .counterup h3 {
         font-weight: 400;
         text-align: center;
@@ -1048,9 +1109,60 @@ footer span a:hover {
     .contact-details {
         padding-top: 20px;
     }
+    .facts .counterup .fauser_wrapper,
+    .facts .counterup .fadesktop_wrapper,
+    .facts .counterup .fahappy_wrapper 
+    {
+       margin-left: 40% !important;
+    }
+    .contact .contact-content .left .icons{
+        margin: 0;
+    }
+    
+}
+
+@media (max-width: 576px) {
+    section {
+        padding: 50px 0px !important;
+    }
+    section.contact {
+        padding-bottom: 0px !important;
+    }
+    .facts{
+        min-height: 600px;
+    }
+    .facts .counterup {
+        display: block;
+        font-size: 1.1rem;
+        padding-top: 50px;
+    }
+    .facts .counterup .fauser_wrapper,
+    .facts .counterup .fadesktop_wrapper,
+    .facts .counterup .fahappy_wrapper 
+    {
+       margin-left: 40% !important;
+    }
+    .facts .counterup h3 {
+        font-weight: 400;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .contact-details .row {
+        margin: 0;
+    }
+    .contact .contact-content .row .info {
+        margin-left: 20px;
+    }
+    .right form .button-area button{
+        width: 100% !important;
+    }
+    
 }
 
 @media (max-width: 450px) {
+    section {
+        padding: 30px 0px 30px !important;
+    }
     .home {
         min-height: 600px;
     }
@@ -1073,9 +1185,7 @@ footer span a:hover {
         font-size: 1.1rem;
         padding-top: 50px;
     }
-    .facts .counterup .fa {
-        margin-left: 40%;
-    }
+    
     .facts .counterup h3 {
         font-weight: 400;
         text-align: center;
@@ -1089,7 +1199,10 @@ footer span a:hover {
         padding-top: 20px;
     }
     .contact-details .row {
-        margin: 20px;
+        margin: 0;
+    }
+    .contact .contact-content .row .info {
+        margin-left: 20px;
     }
 
     .contact .right form .name,
@@ -1111,3 +1224,4 @@ footer span a:hover {
     }
     
 }
+

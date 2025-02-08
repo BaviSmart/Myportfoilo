@@ -40,7 +40,7 @@ const Projects = () => {
           
           <div className="card wow animate__animated animate__fadeInRight" data-wow-duration=".5s" data-wow-delay=".7s">
             <div className="img-wrapper">
-              <img className="inner-img" src={mis} width="auto" height="100%" alt="MIS Mobile App" />
+              <img className="inner-img mis_app" src={mis} width="auto" height="100%" alt="MIS Mobile App" />
               <div className="overlay">
                 <div className="btn">
                   <a target="_blank" rel="noopener noreferrer" href="#" onClick={(e) => handleClick(e, "MIS Mobile App")}>
@@ -54,7 +54,7 @@ const Projects = () => {
 
           <div className="card wow animate__animated animate__fadeInRight" data-wow-duration=".5s" data-wow-delay="1s">
             <div className="img-wrapper">
-              <img className="inner-img hascover" src={skyhms} width="100%" height="auto" alt="SKYHMS" />
+              <img className="inner-img hascover skyhms" src={skyhms} width="100%" height="auto" alt="SKYHMS" />
               <div className="overlay">
                 <div className="btn">
                   <a target="_blank" rel="noopener noreferrer" href="#" onClick={(e) => handleClick(e, "SKYHMS")}>
@@ -68,7 +68,7 @@ const Projects = () => {
 
           <div className="card wow animate__animated animate__fadeInRight" data-wow-duration=".5s" data-wow-delay="1s">
             <div className="img-wrapper">
-              <img className="inner-img hascover" src={beedesk} width="100%" height="auto" alt="BEEDESK" />
+              <img className="inner-img hascover beedesk" src={beedesk} width="100%" height="auto" alt="BEEDESK" />
               <div className="overlay">
                 <div className="btn">
                   <a target="_blank" rel="noopener noreferrer" href="#" onClick={(e) => handleClick(e, "BEEDESK")}>
@@ -82,7 +82,7 @@ const Projects = () => {
 
           <div className="card wow animate__animated animate__fadeInRight" data-wow-duration=".5s" data-wow-delay="1s">
             <div className="img-wrapper">
-              <img className="inner-img hascover" src={bkgengine} width="auto" height="100%" alt="BOOKING ENGINE" />
+              <img className="inner-img hascover booking_engine" src={bkgengine} width="auto" height="100%" alt="BOOKING ENGINE" />
               <div className="overlay">
                 <div className="btn">
                   <a target="_blank" rel="noopener noreferrer" href="#" onClick={(e) => handleClick(e, "BOOKING ENGINE")}>
@@ -96,7 +96,7 @@ const Projects = () => {
 
           <div className="card wow animate__animated animate__fadeInRight" data-wow-duration=".5s" data-wow-delay=".6s">
             <div className="img-wrapper">
-              <img className="inner-img hascover" src={portfolioImage} width="100%" height="100%" alt="My Portfolio" />
+              <img className="inner-img hascover my_portfolio" src={portfolioImage} width="100%" height="100%" alt="My Portfolio" />
               <div className="overlay">
                 <div className="btn">
                   <a rel="noopener noreferrer" href="#home">
@@ -110,7 +110,7 @@ const Projects = () => {
     
           <div className="card wow animate__animated animate__fadeInRight" data-wow-duration="500ms" data-wow-delay="0s">
             <div className="img-wrapper">
-              <img className="inner-img hascover" src={civilImage} width="100%" height="100%" alt="M Construction" />
+              <img className="inner-img hascover mconstruction" src={civilImage} width="100%" height="100%" alt="M Construction" />
               <div className="overlay">
                 <div className="btn">
                   <a target="_blank" rel="noopener noreferrer" href="#" onClick={(e) => handleClick(e, "M Construction")}>
