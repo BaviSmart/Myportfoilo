@@ -165,7 +165,7 @@ const Contact = () => {
 
       <ToastContainer
         position="top-right"
-        autoClose={5000} // Closes after 5 seconds
+        autoClose={5000} 
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick

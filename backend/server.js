@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 
 // Configure Nodemailer with environment variables
 const transporter = nodemailer.createTransport({
-  host: process.env.EMAIL_HOST, // e.g., smtp.gmail.com
-  port: process.env.EMAIL_PORT, // e.g., 587
+  host: process.env.EMAIL_HOST, 
+  port: process.env.EMAIL_PORT, 
   secure: false, // Use TLS
   auth: {
     user: process.env.EMAIL_USER, // Your Gmail address
@@ -26,11 +26,11 @@ app.post("/send-mail", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   const mailOptions = {
-    from: process.env.EMAIL_USER, // Your authenticated email
+    from: process.env.EMAIL_USER, 
     replyTo: email,
-    to: process.env.EMAIL_USER, // Your email to receive messages
+    to: process.env.EMAIL_USER, 
     subject: `${subject} - ${name}`,
-    text: `Message from ${name} (${email}):\n\n${message}`, // Plain text message
+    text: `Message from ${name} (${email}):\n\n${message}`, 
   };
 
   try {
