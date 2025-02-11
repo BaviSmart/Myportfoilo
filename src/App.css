@@ -982,6 +982,9 @@ footer span a:hover {
 .contact section.Toastify{
     padding: 0;
 }
+.contact a {
+    color: #20a6ff !important;
+}
 
 /* media query */
 
