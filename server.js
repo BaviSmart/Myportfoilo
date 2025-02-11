@@ -8,16 +8,16 @@ require("dotenv").config();
 // Initialize Express
 const app = express();
 const corsOptions = {
-  origin: '*', // Allow all origins
-  methods: 'GET,POST,OPTIONS', // Specify allowed methods
-  allowedHeaders: 'Content-Type,Authorization', // Specify allowed headers
-};
+  origin: '*', 
+  methods: 'GET,POST,OPTIONS', 
+  allowedHeaders: 'Content-Type,Authorization', 
+};g
 
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
-// Configure Nodemailer with environment variables
+//  Configure Nodemailer with environment variables
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST, 
   port: process.env.EMAIL_PORT, 

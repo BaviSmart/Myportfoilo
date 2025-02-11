@@ -40,7 +40,7 @@ const Contact = () => {
 
       if (response.status === 200) {
         toast.success("Your message has been sent successfully!");
-        setFormData({ name: "", email: "", subject: "", message: "" }); // Clear form fields
+        setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
         toast.error("Failed to send message.");
       }
