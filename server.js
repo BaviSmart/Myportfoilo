@@ -7,11 +7,7 @@ require("dotenv").config();
 
 // Initialize Express
 const app = express();
-app.use(cors({
-  origin: ["https://myportfoilo-bavi.vercel.app"], 
-  methods: ["GET", "POST"],
-  allowedHeaders: ["Content-Type"],
-}));
+app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -25,6 +21,7 @@ const transporter = nodemailer.createTransport({
     pass: process.env.EMAIL_PASSWORD, 
   },
 });
+
 
 app.post("/send-mail", async (req, res) => {
   const { name, email, subject, message } = req.body;
