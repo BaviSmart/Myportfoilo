@@ -8,7 +8,7 @@ require("dotenv").config();
 // Initialize Express
 const app = express();
 app.use(cors({
-  origin: "*", 
+  origin: ["https://myportfoilo-bavi.vercel.app"], 
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
 }));
