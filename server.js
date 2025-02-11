@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
-require("dotenv").config(); // Load environment variables from .env file
+require("dotenv").config(); 
 
 // Initialize Express
 const app = express();
@@ -14,14 +14,13 @@ app.use(bodyParser.json());
 const transporter = nodemailer.createTransport({
   host: process.env.EMAIL_HOST, 
   port: process.env.EMAIL_PORT, 
-  secure: false, // Use TLS
+  secure: false, 
   auth: {
-    user: process.env.EMAIL_USER, // Your Gmail address
-    pass: process.env.EMAIL_PASSWORD, // Your app password
+    user: process.env.EMAIL_USER, 
+    pass: process.env.EMAIL_PASSWORD, 
   },
 });
 
-// API endpoint to send email
 app.post("/send-mail", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
