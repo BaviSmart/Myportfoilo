@@ -7,13 +7,8 @@ require("dotenv").config();
 
 // Initialize Express
 const app = express();
-const corsOptions = {
-  origin: '*', // Allow all origins
-  methods: 'GET,POST,OPTIONS', // Specify allowed methods
-  allowedHeaders: 'Content-Type,Authorization', // Specify allowed headers
-};
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.use(bodyParser.json());
 
@@ -29,7 +24,7 @@ const transporter = nodemailer.createTransport({
 });
 
 
-app.post("/send-mail", async (req, res) => {
+app.post("/sendmail", async (req, res) => {
   const { name, email, subject, message } = req.body;
 
   const mailOptions = {
