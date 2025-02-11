@@ -8,12 +8,12 @@ require("dotenv").config();
 // Initialize Express
 const app = express();
 const corsOptions = {
-  origin: '*',
-  methods: ['GET', 'POST'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
+  origin: '*', // Allow all origins
+  methods: 'GET,POST,OPTIONS', // Specify allowed methods
+  allowedHeaders: 'Content-Type,Authorization', // Specify allowed headers
 };
+
 app.use(cors(corsOptions));
-app.options('*', cors()); // Handle pre-flight requests
 
 app.use(bodyParser.json());
 

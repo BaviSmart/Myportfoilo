@@ -36,7 +36,7 @@ const Contact = () => {
 
     try {
       // const response = await axios.post("http://localhost:5000/send-mail", formData);
-      const response = await axios.post("https://myportfolio-bavi.vercel.app/send-mail", formData);
+      const response = await axios.post("https://myportfoilo-bavi.vercel.app/send-mail", formData);
 
       if (response.status === 200) {
         toast.success("Your message has been sent successfully!");
